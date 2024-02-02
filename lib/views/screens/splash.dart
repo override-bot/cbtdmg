@@ -15,12 +15,12 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  // void initState() {
-  //   Future.delayed(Duration(seconds: 4), () {
-  //     RouteController().push(context, HomePage());
-  //   });
-  //   super.initState();
-  // }
+  void initState() {
+    Future.delayed(Duration(seconds: 4), () {
+      RouteController().push(context, HomePage());
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +35,9 @@ class _SplashScreenState extends State<SplashScreen> {
             Text(
               "JAMB PRACTICE SOFTWARE",
               style: TextStyle(
-                  color: purple,
+                  color: ceoPurple,
                   fontSize: TextSize().h(context),
-                  fontWeight: FontWeight.bold),
+                  fontWeight: FontWeight.w600),
             ),
             Expanded(child: Container()),
             Container(
@@ -55,7 +55,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Text(
               "Please wait",
               style: TextStyle(
-                  color: Colors.black,
+                  color: ceoPurple,
                   fontSize: TextSize().h3(context),
                   fontWeight: FontWeight.w400),
             ),

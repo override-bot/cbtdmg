@@ -1,10 +1,10 @@
 import 'package:cbtdmg/data/models/subject_model.dart';
 
 class Mock {
-  final List<Subject> subject1;
-  final List<Subject> subject2;
-  final List<Subject> subject3;
-  final List<Subject> subject4;
+  final Subject subject1;
+  final Subject subject2;
+  final Subject subject3;
+  final Subject subject4;
 
   Mock({
     required this.subject1,
