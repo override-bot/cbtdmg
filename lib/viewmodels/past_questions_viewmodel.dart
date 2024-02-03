@@ -1,4 +1,5 @@
 import 'package:cbtdmg/data/models/answered_question_model.dart';
+import 'package:cbtdmg/data/models/options_model.dart';
 import 'package:cbtdmg/data/models/past_question_request.dart';
 import 'package:cbtdmg/data/repositories/past_questions_repository.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,42 @@ class PastQuestionsViewmodel extends ChangeNotifier {
     _answeredQuestions.clear();
     _currentRequest = null;
     _pastQuestions.clear();
+    _currentAnswerNumber = 0;
+    notifyListeners();
+  }
+
+  String getAnswerFromOption(Option options, correctOption) {
+    if (correctOption == 'a') {
+      return options.a;
+    } else if (correctOption == 'b') {
+      return options.b;
+    } else if (correctOption == 'c') {
+      return options.c;
+    } else {
+      return options.d;
+    }
+  }
+
+  int _currentAnswerNumber = 0;
+  int get currentAnswerNumber => _currentAnswerNumber;
+  void nextAnswer(total) {
+    if (_currentAnswerNumber < total - 1) {
+      _currentAnswerNumber++;
+    } else {
+      _currentAnswerNumber = 0;
+    }
+    notifyListeners();
+  }
+
+  resetAnswerNumber() {
+    _currentAnswerNumber = 0;
+    notifyListeners();
+  }
+
+  void previousAnswer(total) {
+    if (_currentAnswerNumber > 0) {
+      _currentAnswerNumber--;
+    }
     notifyListeners();
   }
 

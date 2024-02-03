@@ -1,3 +1,4 @@
+import 'package:cbtdmg/views/screens/answer_screen.dart';
 import 'package:cbtdmg/views/screens/home_page.dart';
 import 'package:cbtdmg/views/shared/butto.dart';
 import 'package:flutter/material.dart';
@@ -73,7 +74,12 @@ class _ResultScreenState extends State<ResultScreen> {
                   RouteController().push(context, HomePage());
                   _pastQuestionsViewmodel.end();
                 },
-                text: "Return to home")
+                text: "Return to home"),
+            Button(
+                onPressed: () {
+                  RouteController().push(context, AnswerScreen());
+                },
+                text: "View answers")
           ],
         ),
       ),

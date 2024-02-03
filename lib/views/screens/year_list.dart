@@ -6,6 +6,7 @@ import 'package:cbtdmg/data/repositories/past_questions_repository.dart';
 import 'package:cbtdmg/utils/generate_years.dart';
 import 'package:cbtdmg/utils/router.dart';
 import 'package:cbtdmg/views/screens/question_screen.dart';
+import 'package:cbtdmg/views/shared/loader.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -43,6 +44,7 @@ class _YearListState extends State<YearList> {
           itemBuilder: (context, index) {
             return ListTile(
               onTap: () async {
+                PopUp.popLoad(context);
                 _pastQuestionsViewmodel
                     .setYear(generateYears(2001, 2020)[index]);
                 _pastQuestionsViewmodel.setCurrentRequest(PastQuestionRequest(
