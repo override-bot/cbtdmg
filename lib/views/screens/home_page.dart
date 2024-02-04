@@ -4,7 +4,6 @@ import 'package:cbtdmg/utils/colors.dart';
 import 'package:cbtdmg/utils/router.dart';
 import 'package:cbtdmg/utils/text_size.dart';
 import 'package:cbtdmg/views/screens/subject_list.dart';
-import 'package:cbtdmg/views/screens/year_list.dart';
 import 'package:cbtdmg/views/shared/custom_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -36,7 +35,7 @@ class _HomePageState extends State<HomePage> {
                   color: ceoPurple),
             ),
             SizedBox(
-              height: 20,
+              height: 25,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -48,11 +47,11 @@ class _HomePageState extends State<HomePage> {
                     onTap: () {
                       RouteController().push(context, SubjectListScreen());
                     }),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width / 5,
-                ),
-                CustomIconButton(
-                    text: "Take Mock Exam", icon: Icons.school, onTap: () {})
+                // SizedBox(
+                //   width: MediaQuery.of(context).size.width / 5,
+                // ),
+                // CustomIconButton(
+                //     text: "Take Mock Exam", icon: Icons.school, onTap: () {})
               ],
             )
           ]),

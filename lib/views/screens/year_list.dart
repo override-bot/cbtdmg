@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:cbtdmg/data/models/past_question_request.dart';
-import 'package:cbtdmg/data/models/question_model.dart';
-import 'package:cbtdmg/data/repositories/past_questions_repository.dart';
 import 'package:cbtdmg/utils/generate_years.dart';
 import 'package:cbtdmg/utils/router.dart';
 import 'package:cbtdmg/views/screens/question_screen.dart';
@@ -53,6 +51,7 @@ class _YearListState extends State<YearList> {
                 await _pastQuestionsViewmodel
                     .getPastQuestions(_pastQuestionsViewmodel.currentRequest!);
                 print(_pastQuestionsViewmodel.pastQuestions.length);
+                RouteController().pop(context);
                 RouteController().push(context, QuestionScreen());
               },
               leading: Icon(

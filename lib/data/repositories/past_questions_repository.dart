@@ -1,6 +1,5 @@
 import 'package:cbtdmg/data/models/past_question_request.dart';
 import 'package:cbtdmg/data/models/question_model.dart';
-import 'package:cbtdmg/data/models/subject_model.dart';
 import 'package:dio/dio.dart';
 
 import '../../utils/access_token.dart';
